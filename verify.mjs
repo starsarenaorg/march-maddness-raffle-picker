@@ -2,7 +2,7 @@ import { VRFHelper } from "./VRF-helper.mjs";
 import { getParticipantsFileHash, pickAllRaffleWinners,assignRangesToUsers } from "./utils.mjs";
 
 const contract = new VRFHelper(
-    'https://api.avax-test.network/ext/bc/C/rpc',
+    'https://api.avax.network/ext/bc/C/rpc',
     null, // no need for a private key for read only
     '0x847B953fE0D759011dF7Bc89d5700d757eC73Efa',
     './contractABI.json'

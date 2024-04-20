@@ -63,8 +63,6 @@ function updateRanges(users_, selectedNumber) {
 
 export function getBigIntAndPerformKeccak256(bigIntSeed) {
     try {
-
-        //let bytesLike = '0x' + bigIntSeed.toString(16);
         const bytesLike = toBeHex(bigIntSeed)
         const hash = keccak256(bytesLike);
         return toBigInt(hash);
@@ -110,11 +108,13 @@ export function assignRangesToUsers(snapshotFilePath) {
     const data = fs.readFileSync(snapshotFilePath, { encoding: 'utf8', flag: 'r' });
     const users = JSON.parse(data);
     let start = 0;
-    const ranges = users.map(user => {
-        const range = { twitterName: user.twitterName, start: start, end: start + user.tickets - 1 };
-        start += user.tickets;
-        return range;
-    });
+    const ranges = users
+        .filter(user => user.tickets > 0)  // Filter out users with 0 tickets
+        .map(user => {
+            const range = { twitterName: user.twitterHandle, start: start, end: start + user.tickets - 1 };
+            start += user.tickets;
+            return range;
+        });
 
     return ranges;
 }
