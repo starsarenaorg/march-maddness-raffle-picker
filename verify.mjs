@@ -14,7 +14,7 @@ const result = await contract.getResultForSnapshotHash(snapshotHash);
 console.log(`Random number : ${result}`);
 pickAllRaffleWinners(ranges,result,'winnersForVerification.json');
 const originalWinners = getParticipantsFileHash('winnersForVerification.json');
-const verifiedWinners = getParticipantsFileHash('winners.json');
+const verifiedWinners = getParticipantsFileHash('winner.json');
 const verified = originalWinners === verifiedWinners;
 if(verified) {
     console.log('Verification succesfull! The exact same result has been succesfully reconstructed!')

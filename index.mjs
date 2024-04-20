@@ -1,11 +1,14 @@
 import { VRFHelper } from "./VRF-helper.mjs";
 import { getParticipantsFileHash, assignRangesToUsers, pickAllRaffleWinners} from "./utils.mjs";
 import logger from './logger.mjs';
+import fs from 'fs';
 
 async function main() {
 
     const snapshotHash = getParticipantsFileHash('./data/snapshot.json');
     const ranges = assignRangesToUsers('./data/snapshot.json');
+    fs.writeFileSync('ranges.json',JSON.stringify(ranges));
+
     const contract = new VRFHelper(
         'https://api.avax.network/ext/bc/C/rpc',
         '', // Be sure to keep your private key secure!

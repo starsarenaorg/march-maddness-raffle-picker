@@ -15,7 +15,7 @@ async function main() {
     const contract = new VRFHelper(
         'https://api.avax-test.network/ext/bc/C/rpc',
         '', // Be sure to keep your private key secure!
-        '',
+        '0x9b10a7a745eDD7317c0b173D5F63Da639E25C89C',
         './contractABI.json'
     );
 
