@@ -1,5 +1,9 @@
 You can find the list of winners under `winner.json`. The whole process with time stamps and can be found under `logs/app.logs`
 
+## Manual adjustments to the winner list
+* @AVAX_Gold_Fish has been removed from the snapshot due to his request. Huge shoutout to him!
+* @phillipliujr who is a member of the team has been removed from the winner list and replaced with @jayxonez who is the user with the highest amount of raffle tickets without any rewards (spot 7).
+
 ## How did we pick the winners ? 
 * A snapshot is taken at 12 PM EST 20.04.2024 which can be found under`data/snapshot.json`.
 * The keccak256 hash of the snaphot file will be attested on chain to prove that the contents  hasn't been modified. Here is the transaction : https://snowtrace.io/tx/0xbdd3f18c674291d339573119868ea9a015d4a8006778b39bb16be73e91b49cb1?chainId=43114
