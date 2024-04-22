@@ -23,3 +23,4 @@ Run the verify script with `node verify.mjs`, which will:
 ## Second Raffle
 We have organized a second raffle as a consolation prize for the people who didnt hit the jackpot in the first one. We have excluded the team members and big winners from this raffle.
 The process is exactly the same and the same contract is used. To verify script has been extended to verify the second raffle as well.
+Here is the VRF callback with the RNG : https://snowtrace.io/tx/0x1a1fa0e0cde3285f076cc5a7a9770d4a63b01e8f7490b875d9b3956f22653432/eventlog?chainId=43114
