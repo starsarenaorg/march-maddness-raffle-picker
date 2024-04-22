@@ -17,3 +17,9 @@ Run the verify script with `node verify.mjs`, which will:
 1. Hash the `snapshot.json` under `data`.
 2. Fetch the random number seed associated with this hash.
 4. Re-run the whole picking process and compare the results with the published results. 
+
+
+
+## Second Raffle
+We have organized a second raffle as a consolation prize for the people who didnt hit the jackpot in the first one. We have excluded the team members and big winners from this raffle.
+The process is exactly the same and the same contract is used. To verify script has been extended to verify the second raffle as well.
