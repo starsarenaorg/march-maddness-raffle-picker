@@ -149,3 +149,11 @@ export function pickAllRaffleWinners(ranges,randomNumber,winnersJsonPath) {
 
 
 }
+
+export function pickAllRaffleWinnersForTheSecondRaffle(ranges,randomNumber,winnersJsonPath) {
+    const winners = {}
+
+    let { winnerList, seed, tierName, modifiedRanges } = pickUsers(ranges, randomNumber, 10, 'Tier1');
+    winners[tierName] = winnerList;
+    fs.writeFileSync(winnersJsonPath, JSON.stringify(winners));
+}
